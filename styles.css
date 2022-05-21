@@ -1,0 +1,341 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1,h2{
+    font-weight: 400;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+p{
+    margin: 10px 0; 
+}
+
+.card{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow:  0 3px 10px rgba(0,0,0,0.4);
+    color: black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.bton{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: #F67B50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.bton-outline{
+    
+    border: 1px solid white;
+}
+
+.bton:hover{
+    transform: scale(0.98);
+}
+
+img{
+    width: 100%;
+}
+
+
+a{
+    text-decoration: none;
+    
+}
+
+.logo{
+    font-weight: 800;
+    color: #333;
+}
+
+nav ul{
+    list-style: none;
+}
+
+.navbar{
+    background-color: #F67B50;
+    color: white;
+    height: 90px;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a{
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 45px;
+}
+
+.flexBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar .flexBox{
+    justify-content: space-between;
+}
+
+.showCase .grid{
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    overflow: visible;
+}
+ 
+.showCase{
+    background-color: #fab297;
+    color: white;
+    height: 400px;
+    position: relative;
+}
+
+.showCase::after, .showCase::before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -58px;
+    right: 0;
+    left: 0;
+    background: white;
+    transform: skewY(-3deg);
+}
+
+.showcaseForm{
+    position: relative;
+    top: 100px;
+    height: 250px;
+    width: 350px;
+    animation: slideFromRight 1s ease-in;
+    z-index: 10;
+}
+
+.showcaseForm .form-control{
+    margin: 30px 0;
+}
+
+.showcaseForm input[type='text'],
+.showcaseForm input[type='email']{
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.showcaseForm input:focus{
+    outline: none;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-3{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.stats{
+    padding-top: 100px; 
+}
+
+
+.my-1{
+    margin: 1rem 0;
+}
+
+.my-4{
+    margin: 4rem 0;
+} 
+
+.pt-3{
+    padding-top: 3rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.cli .grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cli .grid > :first-child{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+}
+
+.testimonialz{
+    background-color: #fab297;
+    padding-bottom: 20px;
+    margin-top: 4rem;
+}
+
+.testimonialz h1{
+    padding-top: 10px;
+    color: white;
+}
+
+.testimonialz .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.testimonialz .grid .card{
+    border-radius: 0;
+   
+}
+
+.testimonialContent{
+    background-color: white;
+    padding: 20px;
+}
+
+.testimonialContent img{
+    border-radius: 50%;
+    border: 1px solid #333;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+}
+
+.footer{
+    background-color: #F67B50;
+    color: white;
+    margin-top: 5rem;
+    padding-bottom: 4rem;;
+}
+
+.footer .flexBox{
+    justify-content: space-around;
+}
+
+.subContainer h2{
+    color: #333;
+}
+
+.name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.stars{
+    color: #F67B50;
+}
+
+.showcaseMessage{
+    animation: slideFromLeft 1s ease-in;
+}
+
+.showcaseMessage h1{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+
+@keyframes slideFromLeft{
+    0%{
+       transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight{
+    0%{
+       transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .testimonialz .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .footer .flexBox{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cliGrid{
+        display: flex;
+      flex-direction: column;
+    }
+
+    .cliGrid .card{
+        width:95%;
+    }
+
+    .showCase .container .grid{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .showcaseMessage{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .showCaseFlex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .showCaseFlex .showcaseMessage{
+        padding-top: 8rem;
+        font-size: larger;
+    }
+
+    .bton{
+        width: 8rem;
+        font-size: 0.8rem;
+    }
+
+    .showCaseFlex .showcaseForm{
+        position: relative;
+        top: -10px;
+    }
+
+    .submitClass{
+        text-align: center;
+
+    }
+
+    form{
+        text-align: center;
+    }
+}
+
